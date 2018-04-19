@@ -1,13 +1,104 @@
 html,
 body {
+  background: #f5f5f5;
   margin: 0;
-  overflow-x: hidden;
-  height: 300vh;
+  height: 200vh;
+}
+
+.title {
+  font-size: 160px;
+  font-family: 'Avenir Next';
+  font-weight: 800;
+  position: fixed;
+  width: 100vw;
+  text-align: center;
+  bottom: -20px;
+  z-index: 1;
+  color: #0d3aac;
 }
 
 .img-1,
 .img-2 {
+  overflow-x: hidden;
   position: fixed;
   width: 100vw;
   height: 100vh;
+}
+
+.frames {
+  height: 100vh;
+  position: fixed;
+  bottom: 0;
+  display: none;
+  width: calc((300px * 15) + (40px * 2 * 15));
+}
+
+.frames-scroll {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.frame {
+  box-shadow: 0px 8px 16px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: inline-block;
+  height: 200px;
+  width: 300px;
+  margin-top: calc((100vh - 200px) / 2);
+  margin-left: 40px;
+  margin-right: 40px;
+  transition: all .2s ease-in-out;
+  position: relative;
+}
+
+.frame:hover {
+  transform: scale(1.1);
+}
+
+.frame-border {
+  height: inherit;
+  width: inherit;
+  position: absolute;
+}
+
+.frame-pic {
+  height: 160px;
+  width: 260px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.full-screen {
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: none;
+  z-index: 2;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  position: fixed;
+  z-index: 3;
+  right: 40px;
+  color: red;
+  font-size: 100px;
+  font-family: Avenir Next;
+  cursor: pointer;
+  display: none;
+  transition: all .2s ease-in-out;
+}
+
+.back-btn:hover {
+  transform: scale(1.4);
+}
+
+.back-btn:focus {
+  outline: none;
 }
